@@ -1,0 +1,365 @@
+/* NKSSecLab – Home & Activity page styles */
+
+:root {
+	--lab-accent: #2563eb;
+	--lab-accent-hover: #1d4ed8;
+	--lab-bg: #f8fafc;
+	--lab-card-bg: #ffffff;
+	--lab-text: #334155;
+	--lab-text-muted: #64748b;
+	--lab-border: #e2e8f0;
+}
+
+/* Hero */
+.lab-hero {
+	background: linear-gradient(135deg, #51628b 0%, #4268a3 50%, #1466da 100%);
+	color: #fff;
+	padding: 4rem 0;
+	text-align: center;
+}
+
+.lab-hero__title {
+	font-size: clamp(2.25rem, 5vw, 3.5rem);
+	font-weight: 700;
+	letter-spacing: -0.02em;
+	margin: 0 0 0.5rem;
+}
+
+.lab-hero__subtitle {
+	font-size: 1.25rem;
+	opacity: 0.95;
+	margin: 0 0 0.75rem;
+	font-weight: 500;
+}
+
+.lab-hero__tagline {
+	font-size: 1rem;
+	opacity: 0.85;
+	max-width: 36em;
+	margin: 0 auto;
+	line-height: 1.6;
+}
+
+/* Section spacing & title */
+.lab-section {
+	padding: 4rem 0;
+}
+
+.lab-section:nth-child(even) {
+	background-color: var(--lab-bg);
+}
+
+.lab-section .section-title {
+	display: flex;
+	flex-direction: column;
+	gap: 0.25rem;
+	margin-bottom: 2rem;
+}
+
+.lab-section .section-title .subtitle {
+	color: var(--lab-accent);
+	font-size: 0.75rem;
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+	font-weight: 600;
+}
+
+.lab-section .section-title .title {
+	font-size: 1.75rem;
+	font-weight: 600;
+	color: #111;
+	margin: 0;
+}
+
+/* About content */
+.lab-about__content {
+	max-width: 42rem;
+}
+
+.lab-about__content p {
+	font-size: 1.1rem;
+	line-height: 1.7;
+	color: var(--lab-text);
+	margin: 0;
+}
+
+/* Publication list */
+.pub-list {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-direction: column;
+	gap: 1.25rem;
+}
+
+.pub-item {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: baseline;
+	gap: 0.75rem 1rem;
+	padding: 1rem 1.25rem;
+	background: var(--lab-card-bg);
+	border: 1px solid var(--lab-border);
+	border-radius: 8px;
+	transition: box-shadow 0.2s, border-color 0.2s;
+}
+
+.pub-item:hover {
+	border-color: var(--lab-accent);
+	box-shadow: 0 4px 12px rgba(37, 99, 235, 0.08);
+}
+
+.pub-venue {
+	flex-shrink: 0;
+	font-size: 0.8rem;
+	font-weight: 600;
+	color: var(--lab-accent);
+	text-transform: uppercase;
+	letter-spacing: 0.03em;
+}
+
+.pub-title {
+	flex: 1 1 100%;
+	font-size: 1rem;
+	line-height: 1.5;
+	color: #111;
+}
+
+@media (min-width: 768px) {
+	.pub-title {
+		flex: 1 1 0;
+		min-width: 0;
+	}
+}
+
+.pub-badge {
+	flex-shrink: 0;
+	font-size: 0.75rem;
+	font-weight: 600;
+	color: #fff;
+	background: var(--lab-accent);
+	padding: 0.25rem 0.6rem;
+	border-radius: 4px;
+}
+
+/* Footer override for lab pages (no bg image) */
+.lab-footer {
+	background: #0f172a;
+	background-image: none;
+	padding: 2rem 0;
+}
+
+/* ========== Inner page hero (People, Activity) ========== */
+.lab-page-hero {
+	background: linear-gradient(135deg, #51628b 0%, #4268a3 50%, #1466da 100%);
+	color: #fff;
+	padding: 2.5rem 0;
+	text-align: center;
+}
+
+.lab-page-hero__title {
+	font-size: clamp(1.75rem, 4vw, 2.5rem);
+	font-weight: 700;
+	letter-spacing: -0.02em;
+	margin: 0 0 0.5rem;
+}
+
+.lab-page-hero__text {
+	font-size: 1rem;
+	opacity: 0.9;
+	margin: 0;
+}
+
+/* ========== People page ========== */
+.lab-people-page {
+	padding-bottom: 4rem;
+}
+
+.lab-people-content {
+	padding-top: 2rem;
+}
+
+.lab-role-section {
+	margin-bottom: 3rem;
+	padding-bottom: 2.5rem;
+	border-bottom: 1px solid var(--lab-border);
+}
+
+.lab-role-section:last-of-type {
+	border-bottom: 0;
+	margin-bottom: 0;
+	padding-bottom: 0;
+}
+
+.lab-role-title {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+	font-size: 1.25rem;
+	font-weight: 600;
+	color: #111;
+	margin: 0 0 1.5rem;
+	padding-bottom: 0.5rem;
+}
+
+.lab-role-title i {
+	color: var(--lab-accent);
+	font-size: 1.1rem;
+}
+
+.lab-role-section .row > [class*="col-"] {
+	margin-bottom: 1.5rem;
+}
+
+.lab-member-card {
+	background: var(--lab-card-bg);
+	border: 1px solid var(--lab-border);
+	border-radius: 10px;
+	overflow: hidden;
+	height: 100%;
+	transition: box-shadow 0.2s, border-color 0.2s;
+}
+
+.lab-member-card:hover {
+	border-color: var(--lab-accent);
+	box-shadow: 0 6px 20px rgba(37, 99, 235, 0.12);
+}
+
+.lab-member-card__photo {
+	aspect-ratio: 1;
+	overflow: hidden;
+	background: var(--lab-bg);
+}
+
+.lab-member-card__photo img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	display: block;
+}
+
+.lab-member-card__info {
+	padding: 1rem 1.25rem;
+}
+
+.lab-member-card__name {
+	font-size: 1rem;
+	font-weight: 600;
+	margin: 0 0 0.25rem;
+	line-height: 1.3;
+}
+
+.lab-member-card__name a {
+	color: #111;
+	text-decoration: none;
+	transition: color 0.2s;
+}
+
+.lab-member-card__name a:hover {
+	color: var(--lab-accent);
+}
+
+.lab-member-card__role,
+.lab-member-card__meta {
+	font-size: 0.8rem;
+	color: var(--lab-text-muted);
+	margin: 0;
+}
+
+/* ========== Activity page (structured cards) ========== */
+.lab-activity-page .lab-section {
+	background-color: var(--lab-bg);
+}
+
+.lab-activity-grid {
+	display: grid;
+	gap: 1.75rem;
+	grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+	.lab-activity-grid {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+.lab-activity-card {
+	background: var(--lab-card-bg);
+	border: 1px solid var(--lab-border);
+	border-radius: 10px;
+	overflow: hidden;
+	transition: box-shadow 0.2s, border-color 0.2s;
+}
+
+.lab-activity-card:hover {
+	border-color: var(--lab-accent);
+	box-shadow: 0 6px 20px rgba(37, 99, 235, 0.12);
+}
+
+.lab-activity-card__image {
+	aspect-ratio: 16 / 10;
+	overflow: hidden;
+	background: var(--lab-bg);
+}
+
+.lab-activity-card__image img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	display: block;
+}
+
+.lab-activity-card__body {
+	padding: 1.25rem 1.5rem;
+}
+
+.lab-activity-card__meta {
+	font-size: 0.75rem;
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 0.04em;
+	color: var(--lab-accent);
+	margin: 0 0 0.35rem;
+}
+
+.lab-activity-card__title {
+	font-size: 1.05rem;
+	font-weight: 600;
+	color: #111;
+	margin: 0;
+	line-height: 1.4;
+}
+
+/* Legacy activity item (if still used) */
+.lab-activity-item {
+	background: var(--lab-card-bg);
+	border: 1px solid var(--lab-border);
+	border-radius: 8px;
+	overflow: hidden;
+	transition: box-shadow 0.2s, border-color 0.2s;
+}
+
+.lab-activity-item:hover {
+	border-color: var(--lab-accent);
+	box-shadow: 0 4px 16px rgba(37, 99, 235, 0.1);
+}
+
+.lab-activity-item img {
+	width: 100%;
+	height: auto;
+	display: block;
+	object-fit: cover;
+	max-height: 360px;
+}
+
+.lab-activity-item__caption {
+	padding: 1rem 1.25rem;
+	font-size: 1rem;
+	font-weight: 600;
+	color: #111;
+}
+
+.lab-activity-item__caption:empty {
+	display: none;
+}

@@ -1,52 +1,128 @@
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>NKSSecLab - Nankai University</title>
-	<link type="text/css" rel="stylesheet" href="./css/main.css">
-	<link href='https://fonts.googleapis.com/css?family=EB Garamond' rel='stylesheet'>
-	<style>
-	body {
-    font-family: "Sans-serif", "Lucida Sans Unicode", "Lucida Grande";   
-	}
-	A { text-decoration: none} 
-	</style>
+
+	<!-- Favicon -->
+	<link rel="icon" type="image/x-icon" href="images/photos/favicon.png">
+
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+
+	<!-- Bootstrap Icons -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+
+	<!-- Google Font -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+	<!-- Main Style -->
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/lab.css">
+
+	<!-- Responsive -->
+	<link rel="stylesheet" href="css/responsive.css">
 </head>
-<body link="blue" vlink="blue">
-	<div class="outer"></div>
-	<div class="main">
-		<div class="title"><a href="team.html" target="_blank">Home</a> | <a href="people.html" target="_blank">People</a> | <a href="activity.html" target="_blank">Activity</a></div>
-		<hr>
-		<table border="0" width="100%" cellpadding="0">
-		
-		<p><font size="6px"><strong>Research Team</strong></font></p>
-		<p>
-			NKSSecLab is the Software Security Team at Nankai University. We conduct research in software security, with a focus on trustworthy software, software supply chain security, and mobile security, among other related topics.
-		<br>
-		</p>
-		
-		<p><font size="6px"><strong>Selected Publications</strong></font></p>
-		<p>(USENIX Security 2026) Cutting the Gordian Knot: Detecting Malicious PyPI Packages via a Knowledge-Mining Framework</p>
-		<p>(USENIX Security 2026) Revealing the Dark Side of Smart Accounts: An Empirical Study of EIP-7702 Incurred Risks in Blockchain Ecosystem</p>
-		<p>(CCS 2025) ForeDroid: Scenario-Aware Analysis for Android Malware Detection and Explanation</p>
-		<p>(USENIX Security 2024) Using My Functions Should Follow My Checks: Understanding and Detecting Insecure OpenZeppelin Code in Smart Contracts</p>
-		<p>(FSE 2024) Static Application Security Testing (SAST) Tools for Smart Contracts: How Far Are We?, <font color="blue">Distinguished Paper Award</font></p>
-		<p>(ASE 2023) EndWatch: A Practical Method for Detecting Non-Termination in Real-World Software, <font color="blue">Distinguished Paper Award</font></p>
-		<p>(ICSE 2023) Compatible Remediation on Vulnerabilities from Third-Party Libraries for Java Projects, <font color="blue">Distinguished Paper Award</font></p>
-		<p>(ASE 2022) Has My Release Disobeyed Semantic Versioning? Static Detection Based On Semantic Differencing, <font color="blue">Distinguished Paper Award</font></p>
+<body>
+	<header class="site-header">
+		<div class="header-menu">
+			<div class="container">
+				<div class="menu-wrapper">
+					<div class="logo"><a href="index.html"><h2>NKSSecLab</h2></a></div>
+					<nav>
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li><a href="people.html">People</a></li>
+							<li><a href="activity.html">Activity</a></li>
+						</ul>
+					</nav>
+					<div class="menu-toggle">
+						<div class="open"><i class="bi bi-grid-3x3-gap"></i></div>
+						<div class="close"><i class="bi bi-x-lg"></i></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
 
-		<hr>
-		<div class="footer">
-		<table align="center">
-  			<tr>
-    				<th align="center"><a href="https://clustrmaps.com/site/1alh9" title="Visit tracker"><img src="http://www.clustrmaps.com/map_v2.png?d=c0iE23T-kE1Z77RydQ1UoeK1VAiMMSYMmQ2R2rgt6Mk&cl=ffffff" width="200" height="125"></a>
-    				</th>
-  			</tr>
-			<tr>
-				<th>©2026 NKSSecLab. All rights reserved</th>
-			</tr>
-		</table>
-	</div>
-	</div>
- 	<div class="outer"></div>
-<div id="cntvlive2-is-installed"></div>
+	<main>
+		<!-- Hero -->
+		<section class="lab-hero">
+			<div class="container">
+				<h1 class="lab-hero__title">NKSSecLab</h1>
+				<p class="lab-hero__subtitle">Software Security Team at Nankai University</p>
+				<p class="lab-hero__tagline">Trustworthy software, software supply chain security, mobile security &amp; related research</p>
+			</div>
+		</section>
 
+		<!-- Research Team -->
+		<section class="lab-section lab-about">
+			<div class="container">
+				<h2 class="section-title"><span class="subtitle">Who we are</span><span class="title">Research Team</span></h2>
+				<div class="lab-about__content">
+					<p>NKSSecLab is the Software Security Team at Nankai University. We conduct research in software security, with a focus on <strong>trustworthy software</strong>, <strong>software supply chain security</strong>, and <strong>mobile security</strong>, among other related topics.</p>
+				</div>
+			</div>
+		</section>
+
+		<!-- Selected Publications -->
+		<section class="lab-section lab-publications">
+			<div class="container">
+				<h2 class="section-title"><span class="subtitle">Our work</span><span class="title">Selected Publications</span></h2>
+				<ul class="pub-list">
+					<li class="pub-item">
+						<span class="pub-venue">USENIX Security 2026</span>
+						<span class="pub-title">Cutting the Gordian Knot: Detecting Malicious PyPI Packages via a Knowledge-Mining Framework</span>
+					</li>
+					<li class="pub-item">
+						<span class="pub-venue">USENIX Security 2026</span>
+						<span class="pub-title">Revealing the Dark Side of Smart Accounts: An Empirical Study of EIP-7702 Incurred Risks in Blockchain Ecosystem</span>
+					</li>
+					<li class="pub-item">
+						<span class="pub-venue">CCS 2025</span>
+						<span class="pub-title">ForeDroid: Scenario-Aware Analysis for Android Malware Detection and Explanation</span>
+					</li>
+					<li class="pub-item">
+						<span class="pub-venue">USENIX Security 2024</span>
+						<span class="pub-title">Using My Functions Should Follow My Checks: Understanding and Detecting Insecure OpenZeppelin Code in Smart Contracts</span>
+					</li>
+					<li class="pub-item">
+						<span class="pub-venue">FSE 2024</span>
+						<span class="pub-title">Static Application Security Testing (SAST) Tools for Smart Contracts: How Far Are We?</span>
+						<span class="pub-badge">Distinguished Paper Award</span>
+					</li>
+					<li class="pub-item">
+						<span class="pub-venue">ASE 2023</span>
+						<span class="pub-title">EndWatch: A Practical Method for Detecting Non-Termination in Real-World Software</span>
+						<span class="pub-badge">Distinguished Paper Award</span>
+					</li>
+					<li class="pub-item">
+						<span class="pub-venue">ICSE 2023</span>
+						<span class="pub-title">Compatible Remediation on Vulnerabilities from Third-Party Libraries for Java Projects</span>
+						<span class="pub-badge">Distinguished Paper Award</span>
+					</li>
+					<li class="pub-item">
+						<span class="pub-venue">ASE 2022</span>
+						<span class="pub-title">Has My Release Disobeyed Semantic Versioning? Static Detection Based On Semantic Differencing</span>
+						<span class="pub-badge">Distinguished Paper Award</span>
+					</li>
+				</ul>
+			</div>
+		</section>
+	</main>
+
+	<footer class="site-footer lab-footer">
+		<div class="container">
+			<div class="copyright">
+				<p class="copyright-text">©2026 NKSSecLab. All rights reserved.</p>
+			</div>
+		</div>
+	</footer>
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/script.js"></script>
 </body>
 </html>
