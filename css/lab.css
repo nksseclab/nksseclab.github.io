@@ -12,8 +12,8 @@
 
 /* Hero */
 .lab-hero {
-	background: linear-gradient(135deg, #51628b 0%, #4268a3 50%, #1466da 100%);
-	color: #fff;
+	background: linear-gradient(145deg, #1e3a5f 0%, #2d4a7c 40%, #2563eb 100%);
+	color: #f1f5f9;
 	padding: 4rem 0;
 	text-align: center;
 }
@@ -23,21 +23,25 @@
 	font-weight: 700;
 	letter-spacing: -0.02em;
 	margin: 0 0 0.5rem;
+	color: #ffffff;
+	text-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
 }
 
 .lab-hero__subtitle {
-	font-size: 1.25rem;
+	font-size: 1.35rem;
 	opacity: 0.95;
 	margin: 0 0 0.75rem;
 	font-weight: 500;
+	color: #e2e8f0;
 }
 
 .lab-hero__tagline {
-	font-size: 1rem;
-	opacity: 0.85;
+	font-size: 1.1rem;
+	opacity: 0.9;
 	max-width: 36em;
 	margin: 0 auto;
 	line-height: 1.6;
+	color: #cbd5e1;
 }
 
 /* Section spacing & title */
@@ -58,29 +62,66 @@
 
 .lab-section .section-title .subtitle {
 	color: var(--lab-accent);
-	font-size: 0.75rem;
+	font-size: 0.8rem;
 	text-transform: uppercase;
 	letter-spacing: 0.1em;
 	font-weight: 600;
 }
 
 .lab-section .section-title .title {
-	font-size: 1.75rem;
+	font-size: 1.95rem;
 	font-weight: 600;
 	color: #111;
 	margin: 0;
 }
 
-/* About content */
+/* About section – expand/collapse */
+.lab-about__heading {
+	cursor: pointer;
+	user-select: none;
+	outline: none;
+}
+
+.lab-about__heading:hover .title,
+.lab-about__heading:focus .title {
+	color: var(--lab-accent);
+}
+
+.lab-about__chevron {
+	display: inline-block;
+	margin-left: 0.25rem;
+	font-size: 0.9em;
+	vertical-align: 0.05em;
+	transition: transform 0.25s ease;
+}
+
+.lab-about.is-collapsed .lab-about__chevron {
+	transform: rotate(-90deg);
+}
+
 .lab-about__content {
 	max-width: 42rem;
+	overflow: hidden;
+	max-height: 32em;
+	transition: max-height 0.35s ease, opacity 0.25s ease;
+}
+
+.lab-about.is-collapsed .lab-about__content {
+	max-height: 0;
+	opacity: 0;
+	margin-top: 0;
+	padding-top: 0;
 }
 
 .lab-about__content p {
-	font-size: 1.1rem;
+	font-size: 1.15rem;
 	line-height: 1.7;
 	color: var(--lab-text);
 	margin: 0;
+}
+
+.lab-about__content p + p {
+	margin-top: 1rem;
 }
 
 /* Publication list */
@@ -112,7 +153,7 @@
 
 .pub-venue {
 	flex-shrink: 0;
-	font-size: 0.8rem;
+	font-size: 0.875rem;
 	font-weight: 600;
 	color: var(--lab-accent);
 	text-transform: uppercase;
@@ -121,7 +162,7 @@
 
 .pub-title {
 	flex: 1 1 100%;
-	font-size: 1rem;
+	font-size: 1.1rem;
 	line-height: 1.5;
 	color: #111;
 }
@@ -152,21 +193,21 @@
 
 /* ========== Inner page hero (People, Activity) ========== */
 .lab-page-hero {
-	background: linear-gradient(135deg, #51628b 0%, #4268a3 50%, #1466da 100%);
-	color: #fff;
+	background: linear-gradient(145deg, #1e3a5f 0%, #2d4a7c 40%, #2563eb 100%);
+	color: #f1f5f9;
 	padding: 2.5rem 0;
 	text-align: center;
 }
 
 .lab-page-hero__title {
-	font-size: clamp(1.75rem, 4vw, 2.5rem);
+	font-size: clamp(1.9rem, 4vw, 2.75rem);
 	font-weight: 700;
 	letter-spacing: -0.02em;
 	margin: 0 0 0.5rem;
 }
 
 .lab-page-hero__text {
-	font-size: 1rem;
+	font-size: 1.1rem;
 	opacity: 0.9;
 	margin: 0;
 }
@@ -196,7 +237,7 @@
 	display: flex;
 	align-items: center;
 	gap: 0.5rem;
-	font-size: 1.25rem;
+	font-size: 1.35rem;
 	font-weight: 600;
 	color: #111;
 	margin: 0 0 1.5rem;
@@ -244,7 +285,7 @@
 }
 
 .lab-member-card__name {
-	font-size: 1rem;
+	font-size: 1.05rem;
 	font-weight: 600;
 	margin: 0 0 0.25rem;
 	line-height: 1.3;
@@ -262,7 +303,7 @@
 
 .lab-member-card__role,
 .lab-member-card__meta {
-	font-size: 0.8rem;
+	font-size: 0.9rem;
 	color: var(--lab-text-muted);
 	margin: 0;
 }
@@ -315,7 +356,7 @@
 }
 
 .lab-activity-card__meta {
-	font-size: 0.75rem;
+	font-size: 0.8rem;
 	font-weight: 600;
 	text-transform: uppercase;
 	letter-spacing: 0.04em;
@@ -324,7 +365,7 @@
 }
 
 .lab-activity-card__title {
-	font-size: 1.05rem;
+	font-size: 1.15rem;
 	font-weight: 600;
 	color: #111;
 	margin: 0;
@@ -355,7 +396,7 @@
 
 .lab-activity-item__caption {
 	padding: 1rem 1.25rem;
-	font-size: 1rem;
+	font-size: 1.1rem;
 	font-weight: 600;
 	color: #111;
 }

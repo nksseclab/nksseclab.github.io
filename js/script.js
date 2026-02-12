@@ -1,6 +1,20 @@
 $(document).ready(function(){
 
 	/*================
+	 About section expand/collapse
+	==================*/
+	$('#about-heading').on('click', function() {
+		$('#about-section').toggleClass('is-collapsed');
+		$(this).attr('aria-expanded', $('#about-section').hasClass('is-collapsed') ? 'false' : 'true');
+	});
+	$('#about-heading').on('keydown', function(e) {
+		if (e.key === 'Enter' || e.key === ' ') {
+			e.preventDefault();
+			$(this).click();
+		}
+	});
+
+	/*================
 	 Menu
      bootstrapÄ£°å¿â£ºHttP://www.bootstrapmb.com
 	==================*/

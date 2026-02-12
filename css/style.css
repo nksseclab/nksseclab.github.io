@@ -7,7 +7,7 @@
 }
 body{
 	color: #525252;
-	font-size: 16px;
+	font-size: 18px;
 	line-height: 1.5;
 	font-family: 'Jost', sans-serif;
 }
@@ -17,22 +17,22 @@ h1, h2, h3, h4, h5, h6{
 	line-height: 1.33;
 }
 h1{
-	font-size: 48px;
+	font-size: 52px;
 }
 h2{
-	font-size: 36px;
+	font-size: 40px;
 }
 h3{
-	font-size: 32px;
+	font-size: 34px;
 }
 h4{
-	font-size: 24px;
+	font-size: 26px;
 }
 h5{
-	font-size: 20px;
+	font-size: 22px;
 }
 h6{
-	font-size: 16px;
+	font-size: 18px;
 }
 a{
 	color: #111111;
@@ -128,6 +128,7 @@ img{
 	position: relative;
 	display: inline-block;
 	font-weight: 500;
+	font-size: 1.25rem;
 	padding: 33px 15px;
 }
 .site-header nav ul li a:hover{
