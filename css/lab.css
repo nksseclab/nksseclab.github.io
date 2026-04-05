@@ -100,7 +100,7 @@
 }
 
 .lab-about__content {
-	max-width: 42rem;
+	max-width: 65rem;
 	overflow: hidden;
 	max-height: 32em;
 	transition: max-height 0.35s ease, opacity 0.25s ease;
