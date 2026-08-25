@@ -184,6 +184,112 @@
 	border-radius: 4px;
 }
 
+.lab-section-action { margin: 2rem 0 0; }
+.lab-button { display: inline-flex; align-items: center; gap: .5rem; padding: .7rem 1rem; color: #fff; background: var(--lab-accent); border-radius: 6px; font-weight: 600; text-decoration: none; }
+.lab-button:hover { color: #fff; background: var(--lab-accent-hover); }
+.lab-publication-heading { margin-bottom: 2.5rem; }
+.lab-publication-heading h2 { margin: 0 0 .35rem; color: #111; font-size: 1.75rem; }
+.lab-publication-heading p { margin: 0; color: var(--lab-text-muted); }
+.lab-publication-year { margin-bottom: 3rem; }
+.lab-publication-year > h2 { margin: 0 0 1rem; padding-bottom: .5rem; border-bottom: 2px solid var(--lab-accent); color: #111; font-size: 1.4rem; }
+.lab-empty-state { padding: 1rem 1.25rem; margin: 0; color: var(--lab-text-muted); background: var(--lab-bg); border: 1px dashed var(--lab-border); border-radius: 8px; }
+
+.pub-controls { display: grid; gap: 1rem; margin-bottom: 1rem; }
+.pub-search { display: flex; align-items: center; gap: .65rem; max-width: 42rem; padding: .7rem 1rem; background: #fff; border: 1px solid var(--lab-border); border-radius: 8px; }
+.pub-search:focus-within { border-color: var(--lab-accent); box-shadow: 0 0 0 3px rgba(37, 99, 235, .1); }
+.pub-search i { color: var(--lab-text-muted); }
+.pub-search input { width: 100%; padding: 0; border: 0; outline: 0; background: transparent; color: var(--lab-text); }
+.pub-filters { display: flex; flex-wrap: wrap; gap: .55rem; }
+.pub-filter { padding: .45rem .8rem; color: var(--lab-text); background: #fff; border: 1px solid var(--lab-border); border-radius: 999px; font: inherit; font-size: .88rem; cursor: pointer; }
+.pub-filter:hover, .pub-filter[aria-pressed="true"] { color: #fff; background: var(--lab-accent); border-color: var(--lab-accent); }
+.pub-summary { margin: 0 0 2rem; color: var(--lab-text-muted); font-size: .9rem; }
+.pub-selects { display: flex; flex-wrap: wrap; align-items: flex-end; gap: .75rem; }
+.pub-selects label { display: grid; gap: .3rem; color: var(--lab-text-muted); font-size: .78rem; font-weight: 600; text-transform: uppercase; letter-spacing: .04em; }
+.pub-selects select { min-width: 9rem; padding: .55rem 2rem .55rem .7rem; color: var(--lab-text); background-color: #fff; border: 1px solid var(--lab-border); border-radius: 6px; font: inherit; font-size: .9rem; text-transform: none; letter-spacing: normal; }
+.pub-reset { padding: .55rem .85rem; color: var(--lab-accent); background: #fff; border: 1px solid var(--lab-accent); border-radius: 6px; font: inherit; font-size: .9rem; cursor: pointer; }
+.pub-reset:hover { color: #fff; background: var(--lab-accent); }
+.pub-list--all { gap: 1rem; }
+.pub-list--all .pub-item[hidden] { display: none; }
+.pub-year { flex-shrink: 0; color: var(--lab-text-muted); font-size: .875rem; font-weight: 600; }
+.faculty-publication-section { margin-bottom: 4rem; }
+.faculty-publication-title { margin: 0 0 1.5rem; padding-bottom: .65rem; color: #111; border-bottom: 2px solid var(--lab-accent); font-size: 1.6rem; }
+.faculty-publication-year { display: grid; grid-template-columns: 4.5rem minmax(0, 1fr); gap: 1.25rem; margin-bottom: 2rem; }
+.faculty-publication-year > h3 { margin: .75rem 0 0; color: var(--lab-accent); font-size: 1.15rem; }
+.pub-item--detailed { align-items: flex-start; }
+.pub-item--detailed .pub-title { flex-basis: calc(100% - 10rem); }
+.pub-authors { flex: 1 1 100%; color: var(--lab-text-muted); font-size: .92rem; line-height: 1.5; }
+
+@media (max-width: 767px) {
+	.faculty-publication-year { grid-template-columns: 1fr; gap: .5rem; }
+	.faculty-publication-year > h3 { margin-top: 0; }
+}
+
+/* Compact, photo-free cards for students and alumni */
+.lab-student-section .row {
+	row-gap: 0.85rem;
+}
+
+.lab-student-section .row > [class*="col-"] {
+	margin-bottom: 0;
+}
+
+.lab-student-section .lab-member-card {
+	display: flex;
+	align-items: center;
+	min-height: 76px;
+	border-left: 3px solid var(--lab-accent);
+	border-radius: 8px;
+}
+
+.lab-student-section .lab-member-card__photo {
+	display: none;
+}
+
+.lab-student-section .lab-member-card__info {
+	width: 100%;
+	padding: 1rem 1.15rem;
+}
+
+.lab-student-section .lab-member-card__name {
+	font-size: 1rem;
+	margin-bottom: 0.35rem;
+}
+
+.lab-student-section .lab-member-card__meta {
+	display: inline-flex;
+	align-items: center;
+	font-size: 0.82rem;
+	line-height: 1.3;
+}
+
+.lab-student-section .lab-member-card__meta::before {
+	content: "\f293";
+	font-family: "bootstrap-icons";
+	margin-right: 0.4rem;
+	color: var(--lab-accent);
+}
+
+.lab-alumni-section .lab-empty-state {
+	max-width: 46rem;
+	border-style: solid;
+	border-left: 3px solid var(--lab-accent);
+	background: var(--lab-card-bg);
+}
+
+@media (min-width: 768px) {
+	.lab-student-section .row > [class*="col-"] {
+		flex: 0 0 50%;
+		max-width: 50%;
+	}
+}
+
+@media (min-width: 1200px) {
+	.lab-student-section .row > [class*="col-"] {
+		flex: 0 0 33.333333%;
+		max-width: 33.333333%;
+	}
+}
+
 /* Footer override for lab pages (no bg image) */
 .lab-footer {
 	background: #0f172a;
