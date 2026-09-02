@@ -369,6 +369,99 @@
 	background: var(--lab-card-bg);
 }
 
+.lab-alumni-intro {
+	max-width: 48rem;
+	padding-top: .25rem;
+	margin-bottom: 1.5rem;
+}
+
+.lab-alumni-kicker {
+	margin: 0 0 .35rem;
+	color: var(--lab-accent);
+	font-size: .78rem;
+	font-weight: 700;
+	letter-spacing: .08em;
+	text-transform: uppercase;
+}
+
+.lab-alumni-intro h3 {
+	margin: 0 0 .55rem;
+	color: #111;
+	font-size: 1.35rem;
+	font-weight: 600;
+}
+
+.lab-alumni-intro > p:last-child {
+	margin: 0;
+	color: var(--lab-text-muted);
+	font-size: .98rem;
+	line-height: 1.65;
+}
+
+.lab-destination-grid {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	gap: .9rem;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.lab-destination-card {
+	display: flex;
+	align-items: center;
+	gap: .85rem;
+	min-height: 84px;
+	padding: 1rem;
+	background: var(--lab-card-bg);
+	border: 1px solid var(--lab-border);
+	border-radius: 9px;
+	transition: border-color .2s, box-shadow .2s, transform .2s;
+}
+
+.lab-destination-card:hover {
+	border-color: #bfdbfe;
+	box-shadow: 0 6px 18px rgba(37, 99, 235, .09);
+	transform: translateY(-2px);
+}
+
+.lab-destination-card__icon {
+	display: grid;
+	flex: 0 0 38px;
+	width: 38px;
+	height: 38px;
+	place-items: center;
+	color: var(--lab-accent);
+	background: #eff6ff;
+	border-radius: 8px;
+}
+
+.lab-destination-card strong,
+.lab-destination-card small {
+	display: block;
+}
+
+.lab-destination-card strong {
+	color: #111;
+	font-size: .95rem;
+	font-weight: 600;
+	line-height: 1.35;
+}
+
+.lab-destination-card small {
+	margin-top: .25rem;
+	color: var(--lab-text-muted);
+	font-size: .8rem;
+}
+
+@media (max-width: 991px) {
+	.lab-destination-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 575px) {
+	.lab-destination-grid { grid-template-columns: 1fr; }
+}
+
 @media (min-width: 768px) {
 	.lab-student-section .row > [class*="col-"] {
 		flex: 0 0 50%;
