@@ -370,7 +370,8 @@
 }
 
 .lab-alumni-intro {
-	max-width: 48rem;
+	width: 100%;
+	max-width: none;
 	padding-top: .25rem;
 	margin-bottom: 1.5rem;
 }
